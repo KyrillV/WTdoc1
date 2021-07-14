@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var counter = [0,0,0,0]
+        function klik(mijnletter){
+            if(mijnletter == 'A'){
+                var knopnummer = 0
+            }
+            if(mijnletter == 'B'){
+                var knopnummer = 1
+            }
+            if(mijnletter == 'C'){
+                var knopnummer = 2
+            }
+            if(mijnletter == 'D'){
+                var knopnummer = 3
+            }
+            counter[knopnummer] = counter[knopnummer] + 1
+            if(counter[knopnummer] > 1){
+                alert("U had al " + (counter[knopnummer] - 1) + " keer op " + mijnletter + " geklikt")
+            }
+            console.log(counter)
+            var div = document.getElementById("mijndiv")
+            var divtekst = "U heeft op knop " + mijnletter + " geklikt <div></div>"
+            div.innerHTML += divtekst
+        }
+    </script>
+</head>
+<body>
+    Miniopdracht 4 & 5
+    <div>
+        <input id="buttonA" type=button value="A" onclick="klik('A')">
+        <input id="buttonB" type=button value="B" onclick="klik('B')">
+        <input id="buttonC" type=button value="C" onclick="klik('C')">
+        <input id="buttonD" type=button value="D" onclick="klik('D')">
+    </div>
+    <div id = "mijndiv">
+    </div>
+</body>
+</html>
