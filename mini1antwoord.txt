@@ -7,12 +7,12 @@
     <title>Document</title>
     <script>
         function doeAlert(){
-        var hetelem = document.getElementById("invoerveld");
-            if( hetelem.value == "hallo"){
-                alert("welkom")
-            }    
-            if( hetelem.value == "doei"){
-                alert("Tot de volgende keer")
+            var hetelem = document.getElementById("invoerveld");
+            if(  hetelem.value == "hallo"   ){
+                alert("Welkom");
+            }
+            if(  hetelem.value == "doei"   ){
+                alert("Tot de volgende keer");
             }
         }
     </script>
@@ -21,9 +21,10 @@
     Miniopdracht 1
     <br>
     <p>
-        <input id=invoerveld>
-        <input type="button" value="groetjes" onclick=doeAlert()>
+        <input id="invoerveld" >
+        <input type="button" value="groetjes" onclick="doeAlert()">
     </p>
-    
+
+
 </body>
 </html>
